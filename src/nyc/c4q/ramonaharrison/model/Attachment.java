@@ -6,8 +6,6 @@ import org.json.simple.JSONObject;
 
 public class Attachment {
 
-
-
     public Attachment(JSONObject json) {
 
 
