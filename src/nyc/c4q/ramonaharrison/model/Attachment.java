@@ -3,19 +3,8 @@ package nyc.c4q.ramonaharrison.model;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
-import java.util.ArrayList;
-import java.util.List;
 
-/**
- * Created by Ramona Harrison
- * on 8/26/16
- *
- * A class representing a message attachment.
- * See https://api.slack.com/docs/message-attachments
- *
- */
 
-public class Attachment {
 
     // TODO: implement private fields for each of the following attachment JSON keys:
     private String fallback;
@@ -88,8 +77,3 @@ public class Attachment {
         }
 
     }
-
-    // TODO add getters to access private fields
-
-
-}
