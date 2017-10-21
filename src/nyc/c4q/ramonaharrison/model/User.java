@@ -26,7 +26,8 @@ public class User {
     private boolean is_restricted; // "is_restricted"
     private boolean is_ultra_restricted;// "is_ultra_restricted"
     private boolean has_2fa; // "has_2fa"
-    private boolean two_factor_type; // "two_factor_type" ********
+    private String two_factor_type; // "two_factor_type" ********
+    private boolean has_files;
 
     //The two_factor_type field is either app or sms. It will only be present if has_2fa is true.
     // "has_files"
@@ -78,8 +79,13 @@ public class User {
         }
 
         if (json.get("two_factor_type") != null) {
-            this.two_factor_type = (Boolean) json.get("two_factor_type");
+            this.two_factor_type = (String) json.get("two_factor_type");
         }
+
+        if (json.get("has_files") != null) {
+            this.has_files = (Boolean) json.get("has_files");
+        }
+
 
     }
 
