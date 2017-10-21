@@ -14,21 +14,21 @@ import org.json.simple.JSONObject;
 public class Attachment {
 
     // TODO: implement private fields for each of the following attachment JSON keys:
-    // "fallback"
-    // "color"
-    // "pretext"
-    // "author_name"
-    // "author_link"
-    // "author_icon"
-    // "title"
-    // "title_link"
-    // "text"
-    // "fields"
-    // "image_url"
-    // "thumb_url"
-    // "footer"
-    // "footer_icon"
-    // "ts"
+     private String fallback;
+     private String color;
+     private String pretext;
+//     "author_name"
+//     "author_link"
+//     "author_icon"
+//     "title"
+//     "title_link"
+//     "text"
+//     "fields"
+//     "image_url"
+//     "thumb_url"
+//     "footer"
+//     "footer_icon"
+//     "ts"
 
     public Attachment(JSONObject json) {
         // TODO: parse an attachment from the incoming json
