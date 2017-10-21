@@ -79,13 +79,8 @@ public class User {
         }
 
         if (json.get("two_factor_type") != null) {
-            this.two_factor_type = (String) json.get("two_factor_type");
+            this.two_factor_type = (Boolean) json.get("two_factor_type");
         }
-
-        if (json.get("has_files") != null) {
-            this.has_files = (Boolean) json.get("has_files");
-        }
-
 
     }
 
@@ -93,4 +88,53 @@ public class User {
 
     }
     // TODO add getters to access private fields
+
+
+    public String getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public boolean isDeleted() {
+        return deleted;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public boolean isIs_admin() {
+        return is_admin;
+    }
+
+    public boolean isIs_owner() {
+        return is_owner;
+    }
+
+    public boolean isIs_primary_owner() {
+        return is_primary_owner;
+    }
+
+    public boolean isIs_restricted() {
+        return is_restricted;
+    }
+
+    public boolean isIs_ultra_restricted() {
+        return is_ultra_restricted;
+    }
+
+    public boolean isHas_2fa() {
+        return has_2fa;
+    }
+
+    public String getTwo_factor_type() {
+        return two_factor_type;
+    }
+
+    public boolean isHas_files() {
+        return has_files;
+    }
 }
