@@ -5,7 +5,10 @@ import nyc.c4q.ramonaharrison.model.Message;
 import nyc.c4q.ramonaharrison.network.*;
 import nyc.c4q.ramonaharrison.network.response.*;
 
+
+import java.util.HashMap;
 import java.util.List;
+import java.util.Random;
 
 /**
  * Created by Ramona Harrison
@@ -23,9 +26,23 @@ public class Bot {
     /**
      * Sample method: tests the Slack API. Prints a message indicating success or failure.
      */
-    public void testApi() {
+    public String jokes(){
+
+        HashMap<Integer, String> jokes = new HashMap<>();
+        jokes.put(1, "Programmer(noun): A machine that turns coffee into code");
+        jokes.put(2, "Programmer(noun): A person who fixed a problem that you don't know you have, in a way you don't understand");
+        jokes.put(3, "Why did the programmer quit his job? \n .... \n Because he didn't get arrays!");
+
+        int wholeNum = (int)(Math.random() * ((2) + 1) + 1);
+        return jokes.get(wholeNum);
+
+    }
+    public boolean testApi() {
         Response apiTest = Slack.testApi();
+        boolean running = apiTest.isOk();
+
         System.out.println("API OK: " +apiTest.isOk() + "\n");
+        return running;
     }
 
     /**
@@ -63,6 +80,12 @@ public class Bot {
                 System.out.println();
                 System.out.println("Timestamp: " + message.getTs());
                 System.out.println("Message: " + message.getText());
+
+                if (message.getText().contains("@U7JNARHKP")){
+                    //sendMessageToBotsChannel("You got me!");
+                    sendMessageToBotsChannel(jokes());
+
+                }
             }
         } else {
             System.err.print("Error listing messages: " + listMessagesResponse.getError());
@@ -98,4 +121,5 @@ public class Bot {
             System.err.print("Error sending message: " + deleteMessageResponse.getError());
         }
     }
+
 }
