@@ -33,7 +33,7 @@ public class Message {
     private String text;
     private String ts;
     private String user;
-    List<Attachment> attachments;
+    List<Attachments> attachments;
 
     public Message(JSONObject json) {
         if (json.get("text") != null) {
@@ -50,9 +50,9 @@ public class Message {
 
         if (json.get("attachments") != null) {
             JSONArray attachmentsArray = (JSONArray) json.get("attachments");
-            this.attachments = new ArrayList<Attachment>();
+            this.attachments = new ArrayList<Attachments>();
             for (int i = 0; i < attachmentsArray.size(); i++) {
-                this.attachments.add(new Attachment((JSONObject) attachmentsArray.get(i)));
+                this.attachments.add(new Attachments((JSONObject) attachmentsArray.get(i)));
             }
         }
 
@@ -70,7 +70,7 @@ public class Message {
         return user;
     }
 
-    public List<Attachment> getAttachments() {
+    public List<Attachments> getAttachments() {
         return attachments;
     }
 }

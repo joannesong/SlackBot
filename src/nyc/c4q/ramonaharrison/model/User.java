@@ -79,7 +79,7 @@ public class User {
         }
 
         if (json.get("two_factor_type") != null) {
-            this.two_factor_type = (Boolean) json.get("two_factor_type");
+            this.two_factor_type = (String) json.get("two_factor_type");
         }
 
     }
