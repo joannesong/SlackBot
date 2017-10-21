@@ -22,14 +22,5 @@ public class Main {
         //mySlack.sendMessage(myBot.jokes());
 
 
-        // Post "Hello, world!" to the #bots channel
-        //myBot.sendMessageToBotsChannel());
-        //myBot.listChannels();
-
-        // Post a pineapple photo to the #bots channel
-        //myBot.sendMessageToBotsChannel("http://weknowyourdreams.com/images/pineapple/pineapple-07.jpg");
-
-        //myBot.sendDirectMessageToAUser(Joanne, "Hi");
-
     }
 }
