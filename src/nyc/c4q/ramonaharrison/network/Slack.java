@@ -1,6 +1,6 @@
 package nyc.c4q.ramonaharrison.network;
 
-import nyc.c4q.ramonaharrison.model.Attachment;
+import nyc.c4q.ramonaharrison.model.Attachments;
 import nyc.c4q.ramonaharrison.network.response.*;
 import nyc.c4q.ramonaharrison.util.Token;
 import org.json.simple.JSONObject;
@@ -96,7 +96,7 @@ public class Slack {
      * @param  attachments a list of one of more attachments to be parsed to a JSON-encoded URL string parameter.
      * @return the SendMessageResponse indicating ok/error or null if the connection failed.
      */
-    public static SendMessageResponse sendMessageWithAttachments(String messageText, List<Attachment> attachments) {
+    public static SendMessageResponse sendMessageWithAttachments(String messageText, List<Attachments> attachments) {
 
         // TODO (optional): implement this method! See https://api.slack.com/docs/message-attachments
         throw new RuntimeException("Method not implemented!");
