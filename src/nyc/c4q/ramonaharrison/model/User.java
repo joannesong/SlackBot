@@ -26,8 +26,8 @@ public class User {
     private boolean is_restricted; // "is_restricted"
     private boolean is_ultra_restricted;// "is_ultra_restricted"
     private boolean has_2fa; // "has_2fa"
-    private boolean two_factor_type; // "two_factor_type" ********
-
+    private String two_factor_type; // "two_factor_type" ********
+    private boolean has_files;
     //The two_factor_type field is either app or sms. It will only be present if has_2fa is true.
     // "has_files"
 
@@ -81,11 +81,11 @@ public class User {
         return has_2fa;
     }
 
-//    public String getTwo_factor_type() {
-//        return two_factor_type;
-//    }
-//
-//    public boolean isHas_files() {
-//        return has_files;
-//    }
+    public String getTwo_factor_type() {
+        return two_factor_type;
+    }
+
+    public boolean isHas_files() {
+        return has_files;
+    }
 }
