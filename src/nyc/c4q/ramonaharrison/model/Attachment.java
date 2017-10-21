@@ -2,38 +2,60 @@ package nyc.c4q.ramonaharrison.model;
 
 import org.json.simple.JSONObject;
 
-/**
- * Created by Ramona Harrison
- * on 8/26/16
- *
- * A class representing a message attachment.
- * See https://api.slack.com/docs/message-attachments
- *
- */
+
 
 public class Attachment {
 
-    // TODO: implement private fields for each of the following attachment JSON keys:
-     private String fallback;
-     private String color;
-     private String pretext;
-//     "author_name"
-//     "author_link"
-//     "author_icon"
-//     "title"
-//     "title_link"
-//     "text"
-//     "fields"
-//     "image_url"
-//     "thumb_url"
-//     "footer"
-//     "footer_icon"
-//     "ts"
-
     public Attachment(JSONObject json) {
-        // TODO: parse an attachment from the incoming json
+
+
+
     }
 
-    // TODO add getters to access private fields
+
+    public String getfallback(){
+        return fallback;
+    }
+    public String getcolor(){
+        return color;
+    }
+    public String getpretext(){
+        return pretext;
+    }
+    public String getauthod_name(){
+        return author_name;
+    }
+    public String getauthor_link(){
+        return author_link;
+    }
+    public String getauthor_icon(){
+        return author_icon;
+    }
+    public String gettitle(){
+        return title;
+    }
+    public String gettext(){
+        return text;
+    }
+    public ArrayList<Fields> getfields(){
+        return fields;
+    }
+    public String getimage_url(){
+        return image_url;
+    }
+    public String getthumb_url(){
+        return thumb_url;
+    }
+    public String getfooter(){
+        return footer;
+    }
+    public String getfooter_icon(){
+        return footer_icon;
+    }
+    public Long getts(){
+        return ts;
+    }
+
+
 
 }
