@@ -25,7 +25,7 @@ public class Attachments {
     private String footer_icon;
     private long ts;
 
-    public Attachment(JSONObject json) {
+    public Attachments(JSONObject json) {
         // TODO: parse an attachment from the incoming json
         if (json.get("fallback") != null) {
             this.fallback = (String) json.get("fallback");
